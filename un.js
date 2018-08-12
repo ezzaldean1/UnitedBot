@@ -7405,7 +7405,7 @@ message.member.removeRole(message.guild.roles.find("name", "100"));
 	}
   if (message.content === 'colors') {
       if (!message.channel.guild) return;
-    message.channel.sendFile('http://bl3rbe.net/up/Iiye8A80B.png');
+    message.channel.sendFile('http://bl3rbe.net/up/zpmE9Vl.png');
   }
 	
 });
