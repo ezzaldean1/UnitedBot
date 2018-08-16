@@ -34,11 +34,7 @@ client.on('message', message => {
         message.channel.send('**Welcome To United:tanabata_tree: ..**')
     }
 });
-client.on('message', message => {
-    if(message.content === 'برب'){
-        message.channel.send('**لا تتاخر :tada: **')
-    }
-});
+
 client.on('message', message => {
     if(message.content === 'احبك'){
         message.channel.send('**حبك برص**')
