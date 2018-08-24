@@ -28,7 +28,7 @@ console.log(' United Bot Is Online')
 
 
  client.on('guildMemberAdd',async member => {
-  const w = ['./welcome_4.png'];
+  const w = ['/welcome_4.png'];
         let Image = Canvas.Image,
             canvas = new Canvas(800, 300),
             ctx = canvas.getContext('2d');
