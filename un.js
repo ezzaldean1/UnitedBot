@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+onst Discord = require('discord.js');
 const client = new Discord.Client();
 var Canvas = require('canvas')
 const moment = require('moment');
