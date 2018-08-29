@@ -1,4 +1,4 @@
-onst Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 var Canvas = require('canvas')
 const moment = require('moment');
@@ -18,7 +18,7 @@ client.on('ready', () => {
 console.log(' United Bot Is Online')
   console.log('---------------')
   client.user.setStatus("Online")
-    client.user.setActivity("United Server",{type: 'PLAYING'})
+    client.user.setActivity("United Shop ",{type: 'PLAYING'})
 });
 
 
@@ -28,7 +28,7 @@ console.log(' United Bot Is Online')
 
 
  client.on('guildMemberAdd',async member => {
-  const w = ['/welcome_4.png'];
+  const w = ['/welcome_4 .png'];
         let Image = Canvas.Image,
             canvas = new Canvas(800, 300),
             ctx = canvas.getContext('2d');
@@ -77,7 +77,7 @@ console.log(' United Bot Is Online')
           ctx.clip();
           ctx.drawImage(ava, 36, 21, 260, 260);
            
-          const c =  client.channels.get("482275488807649289");
+          const c =  client.channels.get("483199215003238400");
           c.sendFile(canvas.toBuffer());
  
 });
