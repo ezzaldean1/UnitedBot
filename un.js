@@ -178,31 +178,32 @@ client.on("channelCreate",  cc => {
   });
 
   
-client.on('messageUpdate', (message, newMessage) => {
 
-    if (message.content === newMessage.content) return;
 
-    if (!message || !message.id || !message.content || !message.guild || message.author.bot) return;
 
-    const channel = message.guild.channels.find('name', 'log');
 
-    if (!channel) return;
 
-    let embed = new Discord.RichEmbed()
+
+
+
+
+
+
 
        
 
-       .setColor('SILVER')
+       
 
-       .setDescription(✏ **تعديل رساله
+     
 
-ارسلها <@${message.author.id}>                                                                                                                         تم تعديلها في شات** <#${message.channel.id}>\n\nقبل التعديل:\n \${message.cleanContent}`\n\nبعد التعديل:\n `${newMessage.cleanContent}`)
 
-       .setTimestamp();
+                                                                                           ** <#${message.channel.id}>\n\nقبل التعديل:\n \${message.cleanContent}`\n\nبعد التعديل:\n `${newMessage.cleanContent}`)
 
-     channel.send({embed:embed});
+       
 
-});
+
+
+
   
 client.on('guildMemberAdd', member => {
 
