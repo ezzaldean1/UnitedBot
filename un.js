@@ -197,7 +197,7 @@ client.on("channelCreate",  cc => {
      
 
 
-                                                                                           ** <#${message.channel.id}>\n\nقبل التعديل:\n \${message.cleanContent}`\n\nبعد التعديل:\n `${newMessage.cleanContent}`)
+                                                                                          
 
        
 
