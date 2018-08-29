@@ -190,7 +190,7 @@ client.on('messageUpdate', (message, newMessage) => {
 
     let embed = new Discord.RichEmbed()
 
-       .setAuthor(${message.author.tag}, message.author.avatarURL)
+       
 
        .setColor('SILVER')
 
