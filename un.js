@@ -1162,49 +1162,25 @@ client.on('message', message => {
 
 });
 
+const A7MD = new Discord.Client();
 
-
-const clientt = new Discord.Client();
-
-console.log("Welcome Again !");
+console.log("BOT ONLINE");
 
  
 
- clientt.on("guildMemberRemove", member => {
+A7MD.on("guildMemberAdd", member => {
 
   member.createDM().then(function (channel) {
 
   return channel.send(**
 
-سلام عليكم يا قلبي 
+سلام عليكم 
 
-لو سمحت طالبك طلب تكقا ادخل السيرفر
+ممكن تشرفنا بالسيرفر ي بعدي
 
-                               [ https://discord.gg/QHHa2Qs ] 
+                               [https://discord.gg/QHHa2Qs] 
 
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-
-**)
-
-}).catch(console.error)
-
-})
-
- 
-
-clientt.on("guildMemberAdd", member => {
-
-  member.createDM().then(function (channel) {
-
-  return channel.send(**
-
-سلام عليكم يا قلبي 
-
-لو سمحت طالبك طلب تكقا ادخل السيرفر
-
-                               [ https://discord.gg/QHHa2Qs ] 
-
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+الدعووة خاصة لك ................... [ ${member}  ]
 
 **) 
 
@@ -1212,5 +1188,7 @@ clientt.on("guildMemberAdd", member => {
 
 })
 
-clientt.login(process.env.BOT_TOKENN);
+A7MD.login(process.env.BOT_TOKEN);
+
+
 client.login(process.env.BOT_TOKEN);
