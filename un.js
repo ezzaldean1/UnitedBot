@@ -1162,4 +1162,55 @@ client.on('message', message => {
 
 });
 
+
+
+const clientt = new Discord.Client();
+
+console.log("Welcome Again !");
+
+ 
+
+ clientt.on("guildMemberRemove", member => {
+
+  member.createDM().then(function (channel) {
+
+  return channel.send(**
+
+سلام عليكم يا قلبي 
+
+لو سمحت طالبك طلب تكقا ادخل السيرفر
+
+                               [ https://discord.gg/QHHa2Qs ] 
+
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+
+**)
+
+}).catch(console.error)
+
+})
+
+ 
+
+clientt.on("guildMemberAdd", member => {
+
+  member.createDM().then(function (channel) {
+
+  return channel.send(**
+
+سلام عليكم يا قلبي 
+
+لو سمحت طالبك طلب تكقا ادخل السيرفر
+
+                               [ https://discord.gg/QHHa2Qs ] 
+
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
+
+**) 
+
+}).catch(console.error)
+
+})
+
+clientt.login(process.env.BOT_TOKENN);
 client.login(process.env.BOT_TOKEN);
