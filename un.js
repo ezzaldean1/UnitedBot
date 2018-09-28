@@ -24,7 +24,7 @@ client.on('ready', () => {
 
   client.user.setStatus("Online")
 
-    client.user.setActivity(" United Server ",{type: 'WATCHING'})
+    client.user.setActivity(" Mob Server ",{type: 'WATCHING'})
 
 });
 
@@ -90,7 +90,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
   
 
-   var role = member.guild.roles.find ("name", "United");
+   var role = member.guild.roles.find ("name", "Mob");
 
    member.addRole (role);
 
@@ -116,7 +116,7 @@ const Canvas = require('canvas');
 
 client.on('guildMemberAdd', member => {
 
-     const welcomer =  member.guild.channels.find('name', 'united');
+     const welcomer =  member.guild.channels.find('name', 'mob');
 
 const w = ['./w1.png'];
 
@@ -244,7 +244,7 @@ client.on("ready", () => {
 
     while (!guild)
 
-        guild = client.guilds.get("494821106440732673");
+        guild = client.guilds.get("494933549950959653");
 
     guild.fetchInvites().then((data) => {
 
@@ -268,7 +268,7 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", (member) => {
 
-    let channel = member.guild.channels.get("494821107321405460");
+    let channel = member.guild.channels.get("494933549955153921");
 
     if (!channel) {
 
@@ -290,7 +290,7 @@ client.on("guildMemberAdd", (member) => {
 
     while (!guild)
 
-        guild = client.guilds.get("494821106440732673");
+        guild = client.guilds.get("494933549950959653");
 
     guild.fetchInvites().then((data) => {
 
