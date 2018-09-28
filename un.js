@@ -1174,7 +1174,7 @@ client.on('message', message => {
 
 });
 
-client.on('voice', (old, now) => {
+client.on('voiceStateUpdater', (old, now) => {
 
   const channel = client.channels.get('495156705701920789');
 
@@ -1569,4 +1569,112 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 
 }//by ,$ ReBeL ء , ??#4777 'CODES SERVER'
+
+
+
+client.on('message', OmarMessage => {
+
+    var OmarNull = null;
+
+    if(!OmarMessage.author.bot || OmarMessage.content.startsWith(prefix)) {
+
+        if(OmarMessage.content.split(' ')[0] == `${prefix}Colse-Channels`) {
+
+            if(OmarMessage.guild.member(OmarMessage.author).hasPermission('MANAGE_CHANNELS') && OmarMessage.guild.member(client.user).hasPermission('MANAGE_CHANNELS')) {
+
+                let OmarEveryOne = OmarMessage.guild.roles.filter(r => r.name == `@everyone`).first();
+
+                let i = 0;
+
+                for (i; i <= OmarMessage.guild.channels.size; i++) {
+
+                    let channel = OmarMessage.guild.channels.array()[i];
+
+                    if(i == OmarMessage.guild.channels.size) {
+
+                        OmarMessage.channel.send(`${OmarMessage.author}, تم اغلاق جميع الرومات`);
+
+                    } else {
+
+                        if(channel.type == 'text') {
+
+                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:false});
+
+                        } else if(channel.type == 'voice') {
+
+                            channel.overwritePermissions(OmarEveryOne, {CONNECT:false});
+
+                        } else if(channel.type == 'category') {
+
+                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:false,CONNECT:false});
+
+                        } else OmarNull;
+
+                    };
+
+                };
+
+            };
+
+        };
+
+        if(OmarMessage.content.split(' ')[0] == `$
+
+{prefix}Open-Channels`) {
+
+            if(OmarMessage.guild.member(OmarMessage.author).hasPermission('MANAGE_CHANNELS') && OmarMessage.guild.member(client.user).hasPermission('MANAGE_CHANNELS')) {
+
+                let OmarEveryOne = OmarMessage.guild.roles.filter(r => r.name == `@everyone`).first();
+
+                let i = 0;
+
+                for (i; i <= OmarMessage.guild.channels.size; i++) {
+
+                    let channel = OmarMessage.guild.channels.array()[i];
+
+                    if(i == OmarMessage.guild.channels.size) {
+
+                        OmarMessage.channel.send(`${OmarMessage.author}, تم فتح جميع الرومات`);
+
+                    } else {
+
+                        if(channel.type == 'text') {
+
+                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:true});
+
+                        } else if(channel.type == 'voice') {
+
+                            channel.overwritePermissions(OmarEveryOne, {CONNECT:true});
+
+                        } else if(channel.type == 'category') {
+
+                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:true,CONNECT:true});
+
+                        } else OmarNull;
+
+                    };
+
+                };
+
+            };
+
+        };
+
+    };
+
+});
+client.on("message", (message) => {
+
+	if(message.content.startsWith(prefix+"email")) {		message.channel.send(JSON.stringify({
+
+			email: Math.random().toString(36).slice(4).trim()+"@gmail.com",
+
+			password: Math.random().toString(36).slice(4).trim()
+
+		}))
+
+	}
+
+})
+
 client.login(process.env.BOT_TOKEN);
